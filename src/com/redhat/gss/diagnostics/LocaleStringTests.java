@@ -18,7 +18,7 @@
 package com.redhat.gss.diagnostics;
 import java.util.Locale;
 
-/*
+/**
  * Simple utility that takes an input string and then uses the
  * toLowerCase and toUpperCase methods to convert the case of the
  * provided string. The default locale is used followed by
@@ -40,6 +40,11 @@ import java.util.Locale;
  */
 public class LocaleStringTests {
 
+	/**
+	 * Display the result of passing the provided string(s) to various string operations
+	 *  
+	 * @param args one or more strings
+	 */
 	public static void main(String[] args) {
 		if (args.length < 1) {
 			System.err.println("No input string provided.");
