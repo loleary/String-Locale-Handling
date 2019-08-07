@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.redhat.gss.diagnostics</groupId>
   <artifactId>string-locale-handling</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0</version>
   <name>String Locale Handling</name>
   <description>A simple utility that takes an input string and then uses the toUpperCase and toLowerCase method to display the converted string using the default locale and then using Locale.ENGLISH.
 
