@@ -41,6 +41,32 @@ import java.util.Locale;
 public class LocaleStringTests {
 
 	/**
+	 * Display the result of passing <code>input</code> to the <code>toUpperCase</code> method
+	 * 
+	 * First, <code>toUpperCase()</code> is used followed by a call to
+	 * <code>toUpperCase(Locale.ENGLISH)</code>.
+	 * 
+	 * @param input the string to display using toLowerCase
+	 */
+	public static void printToUpperCase(final String input) {
+		System.out.printf("\"%s\".toUpperCase(): %s%s", input, input.toUpperCase(), System.lineSeparator());
+		System.out.printf("\"%s\".toUpperCase(Locale.ENGLISH): %s%s", input, input.toUpperCase(Locale.ENGLISH), System.lineSeparator());
+	}
+	
+	/**
+	 * Display the result of passing <code>input</code> to the <code>toLowerCase</code> method
+	 * 
+	 * First, <code>toLowerCase()</code> is used followed by a call to
+	 * <code>toLowerCase(Locale.ENGLISH)</code>.
+	 * 
+	 * @param input the string to display using toLowerCase
+	 */
+	public static void printToLowerCase(final String input) {
+		System.out.printf("\"%s\".toLowerCase(): %s%s", input, input.toLowerCase(), System.lineSeparator());
+		System.out.printf("\"%s\".toLowerCase(Locale.ENGLISH): %s%s", input, input.toLowerCase(Locale.ENGLISH), System.lineSeparator());
+	}
+	
+	/**
 	 * Display the result of passing the provided string(s) to various string operations
 	 *  
 	 * @param args one or more strings
@@ -53,10 +79,9 @@ public class LocaleStringTests {
 		String inputString = String.join(", ", args);
 		System.out.printf("Default Locale: %s%s", Locale.getDefault().toString(), System.lineSeparator());
 		System.out.printf("String: %s%s", inputString.toString(), System.lineSeparator());
-		System.out.printf("String.toLowerCase(): %s%s", inputString.toLowerCase(), System.lineSeparator());
-		System.out.printf("String.toLowerCase(Locale.ENGLISH): %s%s", inputString.toLowerCase(Locale.ENGLISH), System.lineSeparator());
-		System.out.printf("String.toUpperCase(): %s%s", inputString.toUpperCase(), System.lineSeparator());
-		System.out.printf("String.toUpperCase(Locale.ENGLISH): %s%s", inputString.toUpperCase(Locale.ENGLISH), System.lineSeparator());
+		System.out.printf("%s", System.lineSeparator());
+		LocaleStringTests.printToLowerCase(inputString);
+		LocaleStringTests.printToUpperCase(inputString);
 	}
 
 }
