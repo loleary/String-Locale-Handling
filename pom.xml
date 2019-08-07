@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.redhat.gss.diagnostics</groupId>
+  <artifactId>string-locale-handling</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>String Locale Handling</name>
+  <description>A simple utility that takes an input string and then uses the toUpperCase and toLowerCase method to display the converted string using the default locale and then using Locale.ENGLISH.
+
+The expected usage would be something like:
+
+    LANG=tr_TR java -cp string-locale-handling.jar com.redhat.gss.diagnostics.LocaleStringTests eviction id
+
+Which would provide the output:
+
+    Default Locale: tr_TR
+    String: eviction, id
+    String.toLowerCase(): eviction, id
+    String.toLowerCase(Locale.ENGLISH): eviction, id
+    String.toUpperCase(): EV�CT�ON, �D
+    String.toUpperCase(Locale.ENGLISH): EVICTION, ID
+</description>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <finalName>${project.artifactId}</finalName>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
